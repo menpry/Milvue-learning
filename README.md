@@ -31,6 +31,12 @@
 
 - 阅读 [Vector Database 101](https://zilliz.com/learn/what-is-vector-database)：向量、Embedding、向量检索、向量数据库是什么
 - 安装 Milvus Standalone 或注册 Zilliz 免费实例
+```powershell
+curl -o docker-compose.yml https://raw.githubusercontent.com/milvus-io/milvus/master/deployments/docker/standalone/docker-compose.yml
+docker compose up -d
+docker compose ps
+docker run -d --name attu -p 3000:3000 -e MILVUS_ADDRESS=host.docker.internal:19530 -v attu-data:/data zilliz/attu:v3.0.0-beta.6
+```
 - 跑 `tutorials/quickstart/quickstart.ipynb`（hello milvus）
 
 **产出**：本地能完成"创建 Collection → 插入向量 → 搜索"的最小闭环。
