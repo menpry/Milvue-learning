@@ -238,7 +238,7 @@ start_time = time.time()
 insert_result = mc.insert(
     COLLECTION_NAME,
     data=dict_list,
-    progress_bar=True)
+    progress_bar=True)  # 显示一个动态进度条
 end_time = time.time()
 print(f"Milvus insert time for {batch.shape[0]} vectors: {end_time - start_time} seconds")
 # 插入完所有实体后，调用 flush，避免 growing segments 一直留在内存中。
