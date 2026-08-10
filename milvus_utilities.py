@@ -198,7 +198,7 @@ def assemble_retrieved_context(retrieved_result, metadata_fields=[],num_shot_ans
                 for field in metadata_fields:
                     metadata[field]=getattr(r.entity,field,None)
                 context_metadata.append(metadata)
-            context.append(r.entity.chunk)
+            context.append(r.entity.text)
         i+=1
 
     return context,context_metadata
