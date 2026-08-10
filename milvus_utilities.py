@@ -2,7 +2,7 @@ import time
 import os
 import numpy as np
 import torch
-from rich.jupyter import display
+from IPython.display import display
 from torch.nn import functional as F
 
 CUSTOM_CACHE = r'F:\Teewon\Milvue\models'
@@ -66,7 +66,7 @@ def imdb_chunk_test(encoder, batch_size, df, chunk_size, chunk_overlap):
     print(f"chunk shape:{batch.shape}")
 
     #  3. Add embeddings as new column in df
-    review_embeddings=torch.tensor(encoder.encode(batch['chunk']))
+    review_embeddings=torch.tensor(encoder.encode(batch['chunk'].tolist()))
         # Normalize embeddings to unit length
     review_embeddings=F.normalize(review_embeddings, p=2, dim=1) # 使用 L2 范数（欧几里得范数）进行归一化
         # Quick check if embeddings are normalized
@@ -198,7 +198,7 @@ def assemble_retrieved_context(retrieved_result, metadata_fields=[],num_shot_ans
                 for field in metadata_fields:
                     metadata[field]=getattr(r.entity,field,None)
                 context_metadata.append(metadata)
-            context.append(r.entity.text)
+            context.append(r.entity.chunk)
         i+=1
 
     return context,context_metadata
