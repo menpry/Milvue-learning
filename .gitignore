@@ -11,4 +11,5 @@ wheels/
 .idea
 
 milvus_demo.db
+milvus_llamaindex.db
 models
