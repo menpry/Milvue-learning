@@ -12,4 +12,5 @@ wheels/
 
 milvus_demo.db
 milvus_llamaindex.db
+milvus_data
 models
