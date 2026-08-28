@@ -10,9 +10,21 @@ wheels/
 .venv
 .idea
 
+# milvus lite
 milvus_demo.db
 milvus_llamaindex.db
 milvus_data
-models
 
+# embedding models
+models
+jieba
+jieba*
+
+# data
 .env
+model/nltk_data/
+RAG/docs
+RAG/output
+Retrieval/data
+Retrieval/*.csv
+Evaluation/data
