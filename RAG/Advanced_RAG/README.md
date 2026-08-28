@@ -1,5 +1,6 @@
 # How to Enhance the Performance of Your RAG Pipeline
 
+[中文](README-zh.md) | English
 
 With the increasing popularity of Retrieval Augmented Generation ([RAG](https://zilliz.com/learn/Retrieval-Augmented-Generation)) applications, there is a growing concern about improving their performance. This article presents all possible ways to optimize RAG pipelines and provides corresponding illustrations to help you quickly understand the mainstream RAG optimization strategies. 
 
