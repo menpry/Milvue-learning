@@ -9,7 +9,7 @@ from langchain_milvus import Milvus
 from langchain_openai import ChatOpenAI
 from langchain_huggingface import HuggingFaceEmbeddings
 
-load_dotenv("../../../.env")
+load_dotenv("../../.env")
 
 CUSTOM_CACHE = r'F:\Teewon\Milvue\models'
 os.environ['HF_HOME'] = CUSTOM_CACHE
@@ -51,7 +51,7 @@ llm=ChatOpenAI(
 vectorstore=Milvus(
     embedding_function=embeddings,
     connection_args={
-        "uri":"../../../milvus_demo.db"
+        "uri":"../../milvus_demo.db"
     },
     auto_id=True,
     drop_old=True,
