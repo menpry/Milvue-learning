@@ -8,7 +8,6 @@ from torch.nn import functional as F
 CUSTOM_CACHE = r'F:\Teewon\Milvue\models'
 os.environ['HF_HOME'] = CUSTOM_CACHE
 os.environ['HF_HUB_CACHE'] = os.path.join(CUSTOM_CACHE, 'hub')
-os.environ['TRANSFORMERS_CACHE'] = os.path.join(CUSTOM_CACHE, 'transformers')
 
 ##########
 # Functions for IMDB demo notebook.
