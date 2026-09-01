@@ -13,6 +13,8 @@ wheels/
 # milvus lite
 milvus_demo.db
 milvus_llamaindex.db
+milvus_ingest.db
+milvus_rag.db
 milvus_data
 
 # embedding models
