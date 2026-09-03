@@ -16,6 +16,7 @@ milvus_llamaindex.db
 milvus_ingest.db
 milvus_rag.db
 milvus_data
+milvus_agent.db
 
 # embedding models
 models
